@@ -17,6 +17,10 @@
   margin-left: 10px;
 }
 
+main {
+  display: flex;
+}
+
 #evaluation-form {
   display: flex;
   width: 675px;
@@ -24,10 +28,20 @@
   background-color: aqua;
 }
 
-main {
-  display: flex;
-}
-
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+#personal-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#input-name , #input-lastname {
+  width: 48%;
+}
+
+#input-email {
+  width: 100%;
 }
