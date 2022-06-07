@@ -1,4 +1,18 @@
 .header {
   display: flex;
   background-color: rgb(50, 167, 145);
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 10px;
+}
+
+.trybewarts-login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.trybewarts-login input ,.trybewarts-login  button{
+  height: 40px;
+  margin-left: 10px;
 }
