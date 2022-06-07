@@ -38,10 +38,10 @@ main {
   justify-content: space-between;
 }
 
-#input-name , #input-lastname {
+#input-name , #input-lastname , #input-email {
   width: 48%;
 }
 
-#input-email {
-  width: 100%;
+#house {
+  width: 49.5%;
 }
