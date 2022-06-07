@@ -20,7 +20,7 @@
 #evaluation-form {
   display: flex;
   width: 675px;
-  background-color: aqua;
+  flex-direction: column;
 }
 
 main {
