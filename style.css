@@ -16,3 +16,13 @@
   height: 40px;
   margin-left: 10px;
 }
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  background-color: aqua;
+}
+
+main {
+  display: flex;
+}
