@@ -21,8 +21,13 @@
   display: flex;
   width: 675px;
   flex-direction: column;
+  background-color: aqua;
 }
 
 main {
   display: flex;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
 }
