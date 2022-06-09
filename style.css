@@ -45,3 +45,13 @@ main {
 #house {
   width: 49.5%;
 }
+
+#label-rate {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+
+#section-radio {
+  display: flex;
+}
