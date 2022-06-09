@@ -55,3 +55,8 @@ main {
 #section-radio {
   display: flex;
 }
+
+#comment {
+  height: 150px;
+  resize: none;
+}
