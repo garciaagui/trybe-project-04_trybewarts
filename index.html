@@ -19,6 +19,7 @@
     </header>
     <main>
         <form id="evaluation-form" action="" method="get">
+
             <section id="personal-info">
                 <input id="input-name" type="text" placeholder="Nome"> 
                 <input id="input-lastname" type="text" placeholder="Sobrenome">
@@ -30,6 +31,7 @@
                     <option id="pytherina-house" value="Pytherina">Pytherina</option>
                 </select>
             </section>
+
             <label id="label-family" for="">Qual sua família?</label>
             <label for="frontend">
                 <input id="frontend" type="radio" name="family" value="Frontend">
@@ -116,13 +118,18 @@
                     10
                 </label>
             </section>
+
             <label for="comment" class="textarea">Deixe seu comentário:</label>
-            <textarea name="comment" id="comment" cols="30" rows="10" maxlength="500"></textarea>
+            <textarea name="comment" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
+            <p id="counter"></p>
+
             <section id="section-agreement">
                 <input type="checkbox" name="agreement" id="agreement">
                 <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
             </section>
+
             <button type="submit" id="submit-btn">Enviar</button>
+
         </form>
         <img src="images/trybewarts-colored.svg" id="trybewarts-forms-logo" alt="Logotipo Trybewarts Formulário">
     </main>

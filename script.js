@@ -4,6 +4,9 @@ const passwordInput = document.querySelector('#password');
 const loginButton = document.querySelector('#submit-button');
 const agreementCheck = document.querySelector('#agreement');
 const submitButton = document.querySelector('#submit-btn');
+const commentTextArea = document.querySelector('#textarea');
+let counter = 500;
+const counterArea = document.querySelector('#counter');
 
 // Declaração das Funções;
 function validateLogin(event) {
@@ -20,9 +23,16 @@ function validateLogin(event) {
 // Ativação das Funções
 window.addEventListener('load', () => {
   submitButton.disabled = true;
+  counterArea.innerHTML = counter;
 });
 
 loginButton.addEventListener('click', validateLogin);
+
+commentTextArea.addEventListener('keyup', () => {
+  const textAreaContent = commentTextArea.value.length;
+  counter = 500 - textAreaContent;
+  counterArea.innerHTML = counter;
+});
 
 agreementCheck.addEventListener('click', () => {
   if (agreementCheck.checked === true) {
