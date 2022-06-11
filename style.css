@@ -34,7 +34,7 @@ main {
   order: 1;
 }
 
-#personal-info {
+#container-personal-info {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -48,17 +48,23 @@ main {
   width: 49.5%;
 }
 
+#container-family {
+  display: flex;
+  flex-direction: column;
+}
+
 #label-rate {
   display: flex;
   flex-flow: row;
   width: 100%;
 }
 
-#section-radio {
+#container-comment {
   display: flex;
+  flex-direction: column;
 }
 
-#comment {
+#textarea {
   height: 150px;
   resize: none;
 }
