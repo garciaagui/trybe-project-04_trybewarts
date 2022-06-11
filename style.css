@@ -21,15 +21,17 @@ main {
   display: flex;
 }
 
-#evaluation-form {
+#evaluation-form , #form-data {
   display: flex;
   width: 675px;
   flex-direction: column;
   background-color: aqua;
+  order: 0;
 }
 
 #trybewarts-forms-logo {
   height: 500px;
+  order: 1;
 }
 
 #personal-info {
