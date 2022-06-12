@@ -18,9 +18,9 @@
 }
 
 #trybewarts-header-title {
+  color: rgb(36, 36, 36);
   font-size: 2em;
   font-weight: 900;
-  color: rgb(36, 36, 36);
 }
 
 .trybewarts-login {
@@ -34,7 +34,6 @@
   margin-left: 10px;
 }
 
-
 main {
   display: flex;
   justify-content: center;
@@ -42,9 +41,9 @@ main {
 
 #evaluation-form , #form-data {
   display: flex;
-  width: 675px;
   flex-direction: column;
   order: 0;
+  width: 675px;
   margin-bottom: 20px;
 }
 
@@ -61,8 +60,8 @@ main {
 }
 
 #input-name , #input-lastname , #input-email , #house {
-  width: 48%;
   margin-bottom: 10px;
+  width: 48%;
 }
 
 #container-family {
@@ -81,9 +80,9 @@ main {
 }
 
 #container-subjects {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 #container-evaluation {
