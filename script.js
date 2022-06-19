@@ -22,6 +22,68 @@ function validateLogin(event) {
   }
 }
 
+function checkPersonalInfoFill() {
+  const name = document.querySelector('#input-name').value;
+  const lastName = document.querySelector('#input-lastname').value;
+  const email = document.querySelector('#input-email').value;
+  if (name.length === 0 || lastName.length === 0 || email.length === 0) {
+    window.alert('Verifique se os campos Nome, Sobrenome e Email foram preenchidos.');
+    return false;
+  } return true;
+}
+
+function checkFamilySelection() {
+  const families = document.getElementsByName('family');
+  let checks = 0;
+  for (let i = 0; i < families.length; i += 1) {
+    if (families[i].checked === false) {
+      checks += 1;
+    }
+  }
+  if (checks === families.length) {
+    window.alert('Verifique se a Família foi selecionada.');
+    return false;
+  } return true;
+}
+
+function checkSubjectsSelection() {
+  const subjects = document.querySelectorAll('.subject');
+  let checks = 0;
+  for (let i = 0; i < subjects.length; i += 1) {
+    if (subjects[i].checked === false) {
+      checks += 1;
+    }
+  }
+  if (checks === subjects.length) {
+    window.alert('Verifique se ao menos um conteúdo foi selecionado.');
+    return false;
+  } return true;
+}
+
+function checkEvaluationSelection() {
+  const rates = document.getElementsByName('rate');
+  let checks = 0;
+  for (let i = 0; i < rates.length; i += 1) {
+    if (rates[i].checked === false) {
+      checks += 1;
+    }
+  }
+  if (checks === rates.length) {
+    window.alert('Verifique se uma nota foi selecionada.');
+    return false;
+  } return true;
+}
+
+function checkFills() {
+  const a = checkPersonalInfoFill();
+  const b = checkFamilySelection();
+  const c = checkSubjectsSelection();
+  const d = checkEvaluationSelection();
+  if (a === false || b === false || c === false || d === false) {
+    return false;
+  } return true;
+}
+
 function getFullName(form) {
   const name = document.querySelector('#input-name').value;
   const lastName = document.querySelector('#input-lastname').value;
@@ -110,7 +172,7 @@ function switchForm() {
 // Ativação das Funções
 window.addEventListener('load', () => {
   submitButton.disabled = true;
-  counterArea.innerHTML = counter;
+  counterArea.innerHTML = `Caracteres restantes: ${counter}.`;
 });
 
 loginButton.addEventListener('click', validateLogin);
@@ -118,7 +180,7 @@ loginButton.addEventListener('click', validateLogin);
 commentTextArea.addEventListener('keyup', () => {
   const textAreaContent = commentTextArea.value.length;
   counter = 500 - textAreaContent;
-  counterArea.innerHTML = counter;
+  counterArea.innerHTML = `Caracteres restantes: ${counter}.`;
 });
 
 agreementCheck.addEventListener('click', () => {
@@ -130,7 +192,11 @@ agreementCheck.addEventListener('click', () => {
 });
 
 submitButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  evaluationForm.style.display = 'none';
-  switchForm();
+  if (checkFills() === true) {
+    e.preventDefault();
+    evaluationForm.style.display = 'none';
+    switchForm();
+  } else {
+    e.preventDefault();
+  }
 });
